@@ -70,7 +70,15 @@ Variables and Types:
             b = 3 // not an expression, rather it's an assignment or we can say value 3 is bound to variable 'b'
 
             expressions can't come on LHS of '=' operator.
-            
+        
+        Operator Precedence: which operator will be higher in importance
+            BEDMAS: Brackets, Exponents, Division/Multiplication, Addition/Subtraction
+            BODMAS: Brackets, Order, Division/Multiplication, Addition/Subtraction
+
+                Division and Multiplication have Equal precedence
+                Addition and Subtraction have Equal precedence
+
+                In an expression that mixes operations with equal precedence, they're evaluated from left to right.
 
 
 """

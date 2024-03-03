@@ -12,6 +12,10 @@ print(a % b)    # 0
 print()
 
 # In python, you can't use float where 'int' is required (strongly typed behaviour of python)
-for i in range(1, a // b):
-    print(i)
+# for i in range(1, a // b):
+#     print(i)
 
+
+print(a + b / 3 - 4 * 12)  # -35.0
+print(a + (b / 3) - (4 * 12))
+print(a / (b * a) / b)
