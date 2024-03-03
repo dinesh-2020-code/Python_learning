@@ -1,4 +1,4 @@
-# print('hello world!')
+print('hello world!')
 
 # print("Python's strings are easy to use.")
 
