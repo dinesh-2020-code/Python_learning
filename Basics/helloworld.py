@@ -79,7 +79,10 @@ Variables and Types:
                 Addition and Subtraction have Equal precedence
 
                 In an expression that mixes operations with equal precedence, they're evaluated from left to right.
+        
+        String datatypes in Python (str)
 
+            
 
 """
 
