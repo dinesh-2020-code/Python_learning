@@ -62,6 +62,15 @@ Variables and Types:
             because Python doesn't have type declarations(where you specify type of a variable before you can use it), it is tempting to think that you
             don't have to understand the difference between the 'int' and 'float' types.
 
+        
+        Expressions: Anything in python that evaluates to some value.
+            (2 + 6), (3 * 4) etc
+            range(1, a // b) is also an expression (contains 2 more expressions as '1' {evaluates to datatype 'int'}, a // b ) evaluates to range of numbers
+            a = 12 // not an expression, rather it's an assignment or we can say value 12 is bound to variable 'a'
+            b = 3 // not an expression, rather it's an assignment or we can say value 3 is bound to variable 'b'
+
+            expressions can't come on LHS of '=' operator.
+            
 
 
 """
