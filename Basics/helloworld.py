@@ -80,11 +80,24 @@ Variables and Types:
 
                 In an expression that mixes operations with equal precedence, they're evaluated from left to right.
         
-        String datatypes in Python (str)
+        String datatypes in Python (str):
+            sequence of chars 
 
-            
+        Python Sequence Types: (built-in)
+            -> The string type
+            -> list
+            -> tuple
+            -> range
+            -> bytes and bytearray
 
-"""
+        Sequence: ordered set of items
+            for ex: string "Hello World" contains 11 items, and each of item is a character
+
+            -> Not all sequence types can be concatenated or multiplied. 'range' is an example of a sequence that can't be concatenated
+
+
+
+""" 
 
 
 # greeting = 'hello'
