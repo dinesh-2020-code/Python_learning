@@ -1,4 +1,13 @@
-
+'''
+    Buy computer program
+    enumerate(): returns each item, with its index position.
+'''
+available_parts = ["Computer",
+                    "Monitor",
+                    "Keyboard",
+                    "Mouse",
+                    "Mouse Mat",
+                    "HDMI Cable"]
 current_choice = "-"
 computer_parts = [] # create an empty list
 
@@ -6,28 +15,29 @@ while current_choice != '0':
     if current_choice in "123456":
         print("Adding {}".format(current_choice))
         if current_choice == '1':
-            computer_parts.append("Computer")
+            computer_parts.append(available_parts[int(current_choice) - 1])
         elif current_choice == '2':
-            computer_parts.append("Monitor")
+            computer_parts.append(available_parts[int(current_choice) - 1])
         elif current_choice == '3':
-            computer_parts.append("Keyboard")
+            computer_parts.append(available_parts[int(current_choice) - 1])
         elif current_choice == '4':
-            computer_parts.append("Mouse")
+            computer_parts.append(available_parts[int(current_choice) - 1])
         elif current_choice == '5':
-            computer_parts.append("Mouse Mat")
+            computer_parts.append(available_parts[int(current_choice) - 1])
         elif current_choice == '6':
-            computer_parts.append("HDMI Cable")
+            computer_parts.append(available_parts[int(current_choice) - 1])
 
     else:
         print("Please Add options from the list below")
-        print("1. Computer")
-        print("2. Monitor")
-        print("3. Keyboard")
-        print("4. Mouse")
-        print("5. Mouse Mat")
-        print("6. HDMI Cable")
-        print("0. to finish")
+        for number, item in enumerate(available_parts):  # enumerate returns pair (index, item)
+            print("{}. {}".format(number + 1, item))
 
     current_choice = input()
 
 print("You bought {}".format(computer_parts))
+
+
+# more on enumerate()
+for index, char in enumerate("abcdefgh"):
+    print(index, char)
+
