@@ -113,3 +113,15 @@ Variables and Types:
 # print(name + ' is ' + age + " years old")  # error: TypeError: can only concatenate str (not "int") to str
 
 
+'''
+    Sequences: 
+        sequence is an ordered collection of items.
+        Anything that you can iterate over is an iterable.
+        
+        Iterable: It's an object that contains either an __iter__ method or an __getitem__ method
+        ex: lists, strings, tuples are iterables. 
+
+        Not all iterables are sequences.
+        For ex: You can use a dictionary in a 'for' loop, but it's not a sequence.
+
+'''
