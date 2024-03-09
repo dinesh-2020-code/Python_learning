@@ -7,25 +7,19 @@ available_parts = ["Computer",
                     "Keyboard",
                     "Mouse",
                     "Mouse Mat",
-                    "HDMI Cable"]
+                    "HDMI Cable",
+                    "DVD drive"
+                    ]
 current_choice = "-"
 computer_parts = [] # create an empty list
-
+# add valid choices of items
+valid_choices = [str(i) for i in range (1, len(available_parts) + 1)]  # list comprehension
 while current_choice != '0':
-    if current_choice in "123456":
+    if current_choice in valid_choices:
         print("Adding {}".format(current_choice))
-        if current_choice == '1':
-            computer_parts.append(available_parts[int(current_choice) - 1])
-        elif current_choice == '2':
-            computer_parts.append(available_parts[int(current_choice) - 1])
-        elif current_choice == '3':
-            computer_parts.append(available_parts[int(current_choice) - 1])
-        elif current_choice == '4':
-            computer_parts.append(available_parts[int(current_choice) - 1])
-        elif current_choice == '5':
-            computer_parts.append(available_parts[int(current_choice) - 1])
-        elif current_choice == '6':
-            computer_parts.append(available_parts[int(current_choice) - 1])
+        index = int (current_choice) - 1
+        chosen_item = available_parts[index]
+        computer_parts.append(chosen_item)
 
     else:
         print("Please Add options from the list below")
@@ -38,6 +32,11 @@ print("You bought {}".format(computer_parts))
 
 
 # more on enumerate()
-for index, char in enumerate("abcdefgh"):
-    print(index, char)
+# for index, char in enumerate("abcdefgh"):
+#     print(index, char)
 
+
+# list comprehensions
+# l = [i for i in range(1, 5)] # [1, 2, 3, 4]
+
+# print(valid_choices)
