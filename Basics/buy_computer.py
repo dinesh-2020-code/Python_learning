@@ -16,11 +16,16 @@ computer_parts = [] # create an empty list
 valid_choices = [str(i) for i in range (1, len(available_parts) + 1)]  # list comprehension
 while current_choice != '0':
     if current_choice in valid_choices:
-        print("Adding {}".format(current_choice))
         index = int (current_choice) - 1
         chosen_item = available_parts[index]
-        computer_parts.append(chosen_item)
-
+        if chosen_item in computer_parts:
+            # remove the item
+            print("Removing {}".format(current_choice))
+            computer_parts.remove(chosen_item)
+        else:
+            print("Adding {}".format(current_choice))
+            computer_parts.append(chosen_item)
+        print("Your cart contains {}".format(computer_parts))
     else:
         print("Please Add options from the list below")
         for number, item in enumerate(available_parts):  # enumerate returns pair (index, item)
