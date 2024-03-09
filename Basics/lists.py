@@ -21,8 +21,8 @@
 # for part in computer_parts:
 #     print(part)
 
-# even = [0, 2, 4, 6, 8]
-# odd  = [1, 3, 5, 7, 9]
+even = [0, 2, 4, 6, 8]
+odd  = [1, 3, 5, 7, 9]
 
 # print(min(even), end= ' ')
 # print(max(even))
@@ -35,3 +35,12 @@
         for ex; s.append(x) # append() is a method which stating that it is called on sequence object.
             len(lst), min(lst) are functions
 '''
+
+
+another_even = even
+print(another_even)
+even.extend(odd)
+print(even)
+even.sort(reverse=True) # even list sorted in descending order in-place i.e., not creating copying of original list
+print(even)
+print(another_even)
