@@ -2,6 +2,13 @@
     Mutable object is one whose value can be changed.
         ex: list, dict, set, bytearray
 
+    https://docs.python.org/3/library/stdtypes.html#mutable-sequence-types
+
+    if you wish to clear the whole mutable sequence, you can write as 
+        1. seq *= 0 or seq *= x , where x can be any neg index.
+        2. seq.clear()
+        3. del s[:]
+
 '''
 
 shopping_list = ["milk",
