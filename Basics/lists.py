@@ -37,10 +37,28 @@ odd  = [1, 3, 5, 7, 9]
 '''
 
 
-another_even = even
-print(another_even)
-even.extend(odd)
-print(even)
-even.sort(reverse=True) # even list sorted in descending order in-place i.e., not creating copying of original list
-print(even)
-print(another_even)
+# another_even = even
+# print(another_even)
+# even.extend(odd)
+# print(even)
+# even.sort(reverse=True) # even list sorted in descending order in-place i.e., not creating copying of original list
+# print(even)
+# print(another_even)
+
+empty_list = []
+numbers = even + odd
+print(numbers)
+
+sorted_numbers = sorted(numbers)
+print(sorted_numbers)
+print(numbers)
+
+digits = sorted("432985617")
+print(digits) # prints the sorted list of each digit (stored as 'string' for ex: ['1', '2', '3', '4'...])
+
+# more_numbers = list(numbers)
+# more_numbers = numbers[:]
+more_numbers = numbers.copy()
+
+print(more_numbers)
+print(numbers is more_numbers) # False
