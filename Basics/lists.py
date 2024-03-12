@@ -45,20 +45,60 @@ odd  = [1, 3, 5, 7, 9]
 # print(even)
 # print(another_even)
 
-empty_list = []
-numbers = even + odd
-print(numbers)
+# empty_list = []
+# numbers = even + odd
+# print(numbers)
 
-sorted_numbers = sorted(numbers)
-print(sorted_numbers)
-print(numbers)
+# sorted_numbers = sorted(numbers)
+# print(sorted_numbers)
+# print(numbers)
 
-digits = sorted("432985617")
-print(digits) # prints the sorted list of each digit (stored as 'string' for ex: ['1', '2', '3', '4'...])
+# digits = sorted("432985617")
+# print(digits) # prints the sorted list of each digit (stored as 'string' for ex: ['1', '2', '3', '4'...])
 
-# more_numbers = list(numbers)
-# more_numbers = numbers[:]
-more_numbers = numbers.copy()
+# # more_numbers = list(numbers)
+# # more_numbers = numbers[:]
+# more_numbers = numbers.copy()
 
-print(more_numbers)
-print(numbers is more_numbers) # False
+# print(more_numbers)
+# print(numbers is more_numbers) # False
+
+
+computer_parts = ["computer",
+                  "monitor",
+                  "keyboard",
+                  "mouse",
+                  "mouse mat"
+                  ]
+# print(computer_parts)
+
+# # s[i:j] = t => slice of s from i to j is replaced by the contents of the iterable t
+# print(computer_parts[3:])
+# computer_parts[3:] = ["trackball"]
+# print(computer_parts)
+
+data = [4, 5, 104, 105, 110, 120, 130, 130, 150,
+        160, 170, 183, 185, 187, 191, 350, 360]
+
+min_valid = 100
+max_valid = 200
+
+# process the low values in the list
+stop = 0
+for index, value in enumerate(data):
+    if value >= min_valid:
+        stop = index
+        break
+
+del data[:stop]
+print(data)
+# process the high values in the list
+start = 0
+for i in range (len(data) - 1, -1, -1):   # traverse backwards
+    if data[i] <= max_valid:
+        start = i+1
+        break
+
+del data[start:]
+
+print(data)
