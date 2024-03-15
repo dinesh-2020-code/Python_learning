@@ -102,3 +102,91 @@ for i in range (len(data) - 1, -1, -1):   # traverse backwards
 del data[start:]
 
 print(data)
+
+
+
+# Iterating backwards in the list.
+
+data = [104, 101, 4, 105, 308, 103, 5,
+         107, 100, 306, 106, 102, 108]
+
+min_valid = 100
+max_valid = 200
+
+# for index in range(len(data)-1, -1, -1):
+#     if data[index] < min_valid or data[index] > max_valid: 
+#         print(index, data)
+#         del data[index]
+#         # print(index)
+
+# print(data)
+
+# #reversed() in python
+
+# top_index = len(data) - 1;  # index of last element in the 'data'
+# for index, value in enumerate(reversed(data)):
+#     if value < min_valid or value > max_valid:
+#         print(top_index - index, value, data)
+#         del data[top_index - index]
+
+
+# print(data)
+
+
+# Nested List
+
+menu = [
+    ["eggs", "bacon"],
+    ["eggs", "sausage", "bacon"],
+    ["eggs", "spam"],
+    ["eggs", "bacon", "spam"],
+    ["eggs", "bacon", "sausage", "spam"],
+    ["spam", "bacon", "sausage", "spam"],
+    ["spam", "sausage", "spam", "bacon", "spam", "tomato", "spam"],
+    ["spam", "eggs", "spam", "spam", "bacon", "spam"],
+    ]
+
+# Challenge: Print all meals with the 'spam' removed.
+
+# for meal in menu:
+#     # print(meal)
+#     item_list = []
+#     for item in meal:
+#         if item != "spam":
+#             item_list.append(item)
+#             print(item, end=', ')
+#     print()
+#     # print(item_list)
+
+# Approach 2: By removing 'spam' from the meal_menu and then printing the meal. 
+
+# for meal in menu:
+#     for index in range(len(meal) - 1, -1, -1):
+#         if meal[index] == "spam":
+#             del meal[index]
+    
+#     print(", ".join(meal))
+'''
+    Function Sign: Tells how the Function is defined
+                Includes the Function's name and the parameteres that it defines
+
+
+    for ex: print() have following sign below
+    
+        print(*objects, sep=' ', end='\n', file=None, flush=False)
+        args: sep, end, file and flush are keyword arguments (named arguments)
+        if no value for 'file' will be used, file=sys.stdout would be used to write on stdout 
+'''
+
+# More on print()
+
+# name = "Tim"
+# age = 10
+
+# print(name, age, "Python", 2024)
+# print(name, age, "Python", 2024, sep=", ")
+# print()
+
+# for meal in menu:
+#     items = ", ".join(item for item in meal if item != "spam")
+#     print(items)
