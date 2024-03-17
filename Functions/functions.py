@@ -42,15 +42,29 @@ def multiply(x, y):
 def is_palindrome(string):
     # backwards = string[::-1]
     # return backwards == string
-    return string[::-1] == string
+    return string[::-1].casefold() == string.casefold()
 
+
+def palindrome_sentence(sentence):
+    string = ""
+    for char in sentence:
+        if char.isalnum():
+            string += char
+    print(string)
+    return is_palindrome(string)
 
 
 ans = multiply(10.5, 4)
 print(ans)
 
-word = input("Enter a word to check: ")
-if is_palindrome(word):
-    print("'{}' is a palindrome.".format(word))
+# word = input("Enter a word to check: ")
+# if is_palindrome(word):
+#     print("'{}' is a palindrome.".format(word))
+# else:
+#     print("'{}' is not a palindrome.".format(word))
+
+sentence = input("Enter a sentence to check: ")
+if palindrome_sentence(sentence):
+    print("'{}' is a palindrome.".format(sentence))
 else:
-    print("'{}' is not a palindrome.".format(word))
+    print("'{}' is not a palindrome.".format(sentence))
