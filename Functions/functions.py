@@ -39,5 +39,18 @@ def multiply(x, y):
     return res
 
 
+def is_palindrome(string):
+    # backwards = string[::-1]
+    # return backwards == string
+    return string[::-1] == string
+
+
+
 ans = multiply(10.5, 4)
 print(ans)
+
+word = input("Enter a word to check: ")
+if is_palindrome(word):
+    print("'{}' is a palindrome.".format(word))
+else:
+    print("'{}' is not a palindrome.".format(word))
