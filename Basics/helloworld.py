@@ -96,6 +96,9 @@ Variables and Types:
             -> Not all sequence types can be concatenated or multiplied. 'range' is an example of a sequence that can't be concatenated
 
 
+            
+    Function Annotations and Type Hints
+        Function Annotations make it clearer what kind of values your functions can accept, and what they return
 
 """ 
 

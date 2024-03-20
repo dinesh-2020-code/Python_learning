@@ -36,21 +36,21 @@
 '''
 
 
-def multiply(x, y):
-    """Returns the product of two numbers x and y
+def multiply(x: float, y: float) -> float:
+    """Multiply two numbers
 
     Args:
-        x (int): Number1
-        y (int): Number2
+        x (float): Number1
+        y (float): Number2
 
     Returns:
-        int: Returns the product of two numbers
+        float: Returns the product of `x` and `y`
     """
     res = x * y
     return res
 
 
-def fibonacci(n):
+def fibonacci(n: int) -> int:
     """Return the `n` th fibonacci number, for positive `n` .
 
     Args:
@@ -71,7 +71,7 @@ def fibonacci(n):
     return result
 
 
-def is_palindrome(string):
+def is_palindrome(string: str) -> bool:
     """This function checks whether given string is a palindrome.
 
     Args:
@@ -85,7 +85,7 @@ def is_palindrome(string):
     return string[::-1].casefold() == string.casefold()
 
 
-def palindrome_sentence(sentence):
+def palindrome_sentence(sentence: str) -> bool:
     """The functions check for the sentence whether it's a palindrome
     sentence without including the whitespaces and punctuation marks.
 
@@ -103,8 +103,8 @@ def palindrome_sentence(sentence):
     return is_palindrome(string)
 
 
-ans = multiply(10.5, 4)
-print(ans)
+# ans = multiply(10.5, 4)
+# print(ans)
 
 # word = input("Enter a word to check: ")
 # if is_palindrome(word):
