@@ -100,6 +100,24 @@ Variables and Types:
     Function Annotations and Type Hints
         Function Annotations make it clearer what kind of values your functions can accept, and what they return
 
+    Python Virtual Env: A python virtual env ia an isolated installation of python, separate from your
+        main installation.
+        If you had to update the `pip` and `setuptools` packages, you'll have seen that packages come in
+        different versions. Python packages get updated
+
+        If you have a program that works with a particular version of package, it might break when you upgrade
+        that package
+        That wouldn't be a good, and as developers, you'll often try out new version of things. 
+        If you install new versions into your main Python installation, you could break a program that you 
+        rely on. 
+        That could be very bad indeed...
+
+        Mac and linux rely on Python for lots of things, Many components of Linux GUI uses python scripts
+        to function. If you break system installation, you could lose access to your operating system's
+        desktop environment.
+
+        Windows users have it slightly easier - you can just uninstall Python and install it again. 
+        But that's still a hassle, and using a virtual environment saves the hassle.
 """ 
 
 
