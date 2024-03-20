@@ -31,21 +31,49 @@
             Pos arguments are assigned to the parameters in the order they appear. In fact, the arguments in this 
             example(multiply()) are really called positional or keyword arguments.
 
+        Functions that are not returning explicitly, returns 'None'.
+
 '''
 
 
 def multiply(x, y):
+    """Returns the product of two numbers x and y
+
+    Args:
+        x (int): Number1
+        y (int): Number2
+
+    Returns:
+        int: Returns the product of two numbers
+    """
     res = x * y
     return res
 
 
 def is_palindrome(string):
+    """This function checks whether given string is a palindrome.
+
+    Args:
+        string (str): Take string as input
+
+    Returns:
+        bool: Returns True if string is a palindrome, False otherwise
+    """
     # backwards = string[::-1]
     # return backwards == string
     return string[::-1].casefold() == string.casefold()
 
 
 def palindrome_sentence(sentence):
+    """The functions check for the sentence whether it's a palindrome
+    sentence without including the whitespaces and punctuation marks.
+
+    Args:
+        sentence (str): Takes a string as a sentence from the user
+
+    Returns:
+        boolean: Returns True if the sentence is a palindrome, False otherwise
+    """
     string = ""
     for char in sentence:
         if char.isalnum():
@@ -63,8 +91,10 @@ print(ans)
 # else:
 #     print("'{}' is not a palindrome.".format(word))
 
-sentence = input("Enter a sentence to check: ")
-if palindrome_sentence(sentence):
-    print("'{}' is a palindrome.".format(sentence))
-else:
-    print("'{}' is not a palindrome.".format(sentence))
+# sentence = input("Enter a sentence to check: ")
+# if palindrome_sentence(sentence):
+#     print("'{}' is a palindrome.".format(sentence))
+# else:
+#     print("'{}' is not a palindrome.".format(sentence))
+
+
