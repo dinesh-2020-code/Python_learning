@@ -118,6 +118,13 @@ Variables and Types:
 
         Windows users have it slightly easier - you can just uninstall Python and install it again. 
         But that's still a hassle, and using a virtual environment saves the hassle.
+
+        A Python virtual env contains a copy of your main Python installation.
+        If you ticked the box to 'Use Site Packages', when you created your virtual env, the env will also 
+        have access to any packages in your main installation.
+
+        In addition, you can install packages into the virtual environment, without affecting your main
+        installation.
 """ 
 
 
