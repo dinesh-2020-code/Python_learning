@@ -1,6 +1,6 @@
 import copy
 
-# from python_test.DictAndSet.simple_deepcopy import dict_deep_copy
+from simple_deepcopy import dict_deep_copy
 
 # animals = {
 #     "lion": "scary",
