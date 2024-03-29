@@ -17,5 +17,5 @@ while choice != "0":
     -> Set is faster than when u use a list because set use hash codes - just like keys in a dict.
     -> A hash code lets us go directly to the item in the hash table.
     -> There's a small overhead while the hash code is calculated, but once that's done, access is very fast.
-    -> 
+    -> If you're working with large data, checking for membership will be lot faster with a set, compared to a list.
 """
