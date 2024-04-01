@@ -5,10 +5,10 @@ trial_patients = ["Denise", "Eddie", "Frank", "Georgia"]
 # Remove Warfarin and add Edoxaban
 for patient in trial_patients:
     prescription = patients[patient]
-    if warfarin in prescription:
+    try:
         prescription.remove(warfarin)
         prescription.add(edoxaban)
-    else:
+    except KeyError:
         print(f"Patient {patient} is not taking Warfaring."
               f" Please remove {patient} from the trial")
     print(patient, prescription)
