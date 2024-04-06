@@ -26,6 +26,29 @@
 
 # jabber.close()
 
-with open('jabberwocky.txt', 'r') as jabber:
-    for line in jabber:
-        print(line.strip())
+# with open('jabberwocky.txt', 'r') as jabber:
+#     # reading file line by line using for loop
+#     # for line in jabber:
+#     #     print(line.strip())
+
+#     # readlines() method: returns the list containing the strings for each line
+#     lines = jabber.readlines()
+
+# print(lines)
+# print(lines[-1])
+# for line in reversed(lines):
+#     print(line, end='')
+
+# with open('jabberwocky.txt', 'r') as jabber:
+#     text = jabber.read()
+
+# # print(text)
+# for char in reversed(text):
+#     print(char, end='')
+
+with open('jabberwocky.txt') as jabber:  # default mode is 'read' mode
+    while True:
+        line = jabber.readline().rstrip()
+        print(line)
+        if 'jubjub' in line.casefold():
+            break
