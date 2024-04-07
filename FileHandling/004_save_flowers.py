@@ -25,3 +25,10 @@ plants_filename = "flowers_print.txt"
 with open(plants_filename, 'w') as plants:
     for plant in data:
         print(plant, file=plants)
+
+new_list = []
+with open(plants_filename) as plants:
+    for plant in plants:
+        new_list.append(plant.rstrip())
+
+print(new_list)
