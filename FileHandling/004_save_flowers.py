@@ -170,16 +170,31 @@ data = [
                                 If they were, we'd still be stuck with only 256 possible codes.
                                 Instead, a code point can be 1 or more bytes. 
                                 
-                                UTF-8, for example, uses 1 byte for the first 128 characters, which corresponds to the
-                                ASCII character set.
-                                The next 1,920 chars are represented by 2 bytes. 
-                                Following on, and using 3 bytes each, are mostg of the Chinese, Japanese and Korean
-                                chars. Lesser used CJK(Chinese, Japanese, Korean) chars, mathematical symbols, musical
-                                characters and emojis are encoded using 4 bytes each.
+                        -> UTF-8: for example, uses 1 byte for the first 128 characters, which corresponds to the
+                            ASCII character set.
+                            The next 1,920 chars are represented by 2 bytes. 
+                            Following on, and using 3 bytes each, are mostg of the Chinese, Japanese and Korean
+                            chars. Lesser used CJK(Chinese, Japanese, Korean) chars, mathematical symbols, musical
+                            characters and emojis are encoded using 4 bytes each.
                                 
-                            UTF-16: 
-                                UTF-16 is a unicode transformation format that uses one or two 16 bit codes. It was
-                                adopted by Microsoft, but since 2019 Windows switched to UTF-8.
+                        -> UTF-16: 
+                            UTF-16 is a unicode transformation format that uses one or two 16 bit codes. It was
+                            adopted by Microsoft, but since 2019 Windows switched to UTF-8.
+                            
+                            If the smallest size of a code point is 2 bytes (16 bits), a file using only the Latin
+                            alphabet will be twice as large as the same text encoded with UTF-8.
+                            That's one reason why UTF-16 has fallen out of favour.
+                        
+                        -> windows-1252:
+                            windows-1252 is a single-byte encoding adopted by Microsoft. It's basically ISO-8859-1 with
+                            some extra characters.
+                            
+                            It's important, because that's the encoding that Python will most likely choose, when you 
+                            call open function on windows.
+                            Of course, this is only true if your windows setup is using the Latin alphabet. If you're
+                            using a different alphabet for your language, the Windows file system will use a suitable
+                            encoding, and that will be the default encoding used by open().
+                            
 '''
 # plants_filename = "flowers_write.txt"
 # with open(plants_filename, 'w') as plants:
