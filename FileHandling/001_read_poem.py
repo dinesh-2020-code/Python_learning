@@ -46,9 +46,21 @@
 # for char in reversed(text):
 #     print(char, end='')
 
-with open('jabberwocky.txt') as jabber:  # default mode is 'read' mode
-    while True:
-        line = jabber.readline().rstrip()
-        print(line)
-        if 'jubjub' in line.casefold():
-            break
+# with open('jabberwocky.txt') as jabber:  # default mode is 'read' mode
+#     while True:
+#         line = jabber.readline().rstrip()
+#         print(line)
+#         if 'jubjub' in line.casefold():
+#             break
+
+# The code below prints the special character in the output (without passing `encoding='utf-8'`
+#  'â€“ Lewis Carroll' instead of '– Lewis Carroll'
+# This is because the python expects that file we are passing should be in utf-8 encoding
+# To fix this we can pass the `encoding='utf-8'` in open() function
+# If the encoding is "platform dependent", you will get different behaviour on different computers.
+# That's not good. We don't want to write software that will work for some people, and fail for others!
+# When opening a text file, explicitly specify the encoding.
+# That applies whether you're opening the file for reading or writing.
+with open('jabberwocky.txt', encoding='utf-8') as jabber:
+    for line in jabber:
+        print(line.rstrip())

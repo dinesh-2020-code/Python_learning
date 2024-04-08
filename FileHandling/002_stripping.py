@@ -13,11 +13,10 @@ def removeprefix(string: str, prefix: str) -> str:
 
 
 def removesuffix(string: str, suffix: str) -> str:
-    if suffix and string.endswith(suffix): # suffix = '' should not call string[:-0]
+    if suffix and string.endswith(suffix):  # suffix = '' should not call string[:-0]
         return string[:-len(suffix)]
     else:
         return string[:]
-
 
 
 filename = 'jabberwocky.txt'
