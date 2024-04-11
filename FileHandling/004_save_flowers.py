@@ -215,4 +215,3 @@ with open(filename, 'w') as test:
     for i in range(10):
         # test.write(i) # error
         test.write(str(i) + "\n")
-
