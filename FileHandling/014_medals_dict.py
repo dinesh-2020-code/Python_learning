@@ -93,7 +93,7 @@ medals_table = [
     {'country': 'Grenada', 'gold': 0, 'silver': 0, 'bronze': 1, 'rank': 86},
     {'country': 'Kuwait', 'gold': 0, 'silver': 0, 'bronze': 1, 'rank': 86},
     {'country': 'Moldova', 'gold': 0, 'silver': 0, 'bronze': 1, 'rank': 86},
-    {'country': 'Syria', 'gold': 0, 'silver': 0, 'bronze': 1, 'rank': 86},
+    {'country': 'Syria', 'bronze': 1, 'rank': 86},
 ]
 
 
@@ -105,7 +105,7 @@ columns = ['country', 'gold', 'silver', 'bronze']
 
 filename = 'country_medals.csv'
 with open(filename, 'w', encoding='utf-8', newline='') as output_file:
-    writer = csv.DictWriter(output_file, fieldnames=columns, extrasaction='ignore')
+    writer = csv.DictWriter(output_file, fieldnames=columns, restval='None', extrasaction='ignore')
     writer.writeheader()
     # for row in medals_table:
     #     writer.writerow(row)
