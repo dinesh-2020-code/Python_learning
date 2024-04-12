@@ -101,12 +101,21 @@ def sort_key(d: dict) -> str:
     return d['country']
 
 
-columns = ['country', 'gold', 'silver', 'bronze', 'rank']
+columns = ['country', 'gold', 'silver', 'bronze']
 
 filename = 'country_medals.csv'
 with open(filename, 'w', encoding='utf-8', newline='') as output_file:
-    writer = csv.DictWriter(output_file, fieldnames=columns)
+    writer = csv.DictWriter(output_file, fieldnames=columns, extrasaction='ignore')
     writer.writeheader()
     # for row in medals_table:
     #     writer.writerow(row)
     writer.writerows(sorted(medals_table, key=sort_key))
+
+
+'''
+    If we want to exclude the some columns that should not be there in the csv file, then we required
+    to pass the other parameter 'extrasaction=ignore' to avoid the error message as following:
+        ValueError: dict contains fields not in fieldnames: 'rank'
+
+    After passing the above parameter, 'rank' column will not be there in there in 'country_medals.csv'.
+'''
