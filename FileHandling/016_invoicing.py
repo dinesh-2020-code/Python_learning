@@ -82,6 +82,20 @@ def record_invoice(invoice_file: TextIO,
     :param company: The name of the company being invoiced.
     :param amount: The amount of the invoice.
     """
+    last_row = ''
+    for line in invoice_file:
+        print("*", end='')  # TODO delete after testing
+        last_row = line
+    if last_row:
+        invoice_number, _, _ = last_row.split('\t')
+        new_invoice_number = next_invoice_number(invoice_number)
+    else:
+        # if the file is empty, we'll start numbering from 1.
+        year = get_year()
+        new_invoice_number = f'{year}-{1:04d}'
+
+    print(f'{new_invoice_number}\t{company}\t{amount}', file=invoice_file)
+
 
 
 # Test code:
