@@ -98,27 +98,32 @@ def record_invoice(invoice_file: TextIO,
 
 
 
+data_file = 'invoices.csv'
+
+with open(data_file, 'r+') as invoices:
+    record_invoice(invoices, 'ACME Roadrunner', 18.40)
+    record_invoice(invoices, 'Squirrel Storage', 320.55)
 # Test code:
-current_year = get_year()
-test_data = [
-    ('2019-0005', (2019, 5), f'{current_year}-0001'),
-    (f'{current_year}-8514', (current_year, 8514), f'{current_year}-8515'),
-    (f'{current_year}-0001', (current_year, 1), f'{current_year}-0002'),
-    (f'{current_year}-0023', (current_year, 23), f'{current_year}-0024'),
-]
+# current_year = get_year()
+# test_data = [
+#     ('2019-0005', (2019, 5), f'{current_year}-0001'),
+#     (f'{current_year}-8514', (current_year, 8514), f'{current_year}-8515'),
+#     (f'{current_year}-0001', (current_year, 1), f'{current_year}-0002'),
+#     (f'{current_year}-0023', (current_year, 23), f'{current_year}-0024'),
+# ]
 
-for test_string, result, next_number in test_data:
-    parts = parse_invoice_number(test_string)
-    if parts == result:
-        print(f'{test_string} parsed successfully')
-    else:
-        print(f'{test_string} failed to parse. Expected {result} got {parts}')
+# for test_string, result, next_number in test_data:
+#     parts = parse_invoice_number(test_string)
+#     if parts == result:
+#         print(f'{test_string} parsed successfully')
+#     else:
+#         print(f'{test_string} failed to parse. Expected {result} got {parts}')
 
-    new_number = next_invoice_number(test_string)
-    if next_number == new_number:
-        print(f'New number {new_number} generated correctly for {test_string}')
-    else:
-        print(f'New number {new_number} is not correct for {test_string}')
+#     new_number = next_invoice_number(test_string)
+#     if next_number == new_number:
+#         print(f'New number {new_number} generated correctly for {test_string}')
+#     else:
+#         print(f'New number {new_number} is not correct for {test_string}')
 
-    print('-' * 80)
+#     print('-' * 80)
 
