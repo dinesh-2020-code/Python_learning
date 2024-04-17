@@ -22,6 +22,19 @@
         -> With text files we only have 2 options when seeking:
             (i) we can seek to the start of the file, 
             (ii) we can seek to the end of the file. You can't seek backwards from the end
+    
+    seek and tell and Unicode
+        -> With text files, you can seek to the start or end of the file.
+        You can also seek to a position within the file, but the position must be a position that
+        you obtained by calling `tell`. You can't just provide any integer value, and expect to end
+        up anywhere useful.
+        -> There is a good reason for that, and it's all to do with character encodings. 
+        As you now know, characters can be encoded using 1, 2, or 4 bytes (in UTF-8). Other encodings
+        also use multiple bytes for various chars.
+        -> If you attempt to seek to a position that you didn't obtain using `tell`, you could end up in
+        middle of a multi-byte character.
+        Reading from that position is going to cause problems. The char will be invalid, and strange things
+        will happen. 
 '''
 
 
