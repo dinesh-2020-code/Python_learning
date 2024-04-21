@@ -7,13 +7,24 @@
         line breaks.
         That can give impression that text files are somehow stored as text. But text is stored as numbers.
 
+    -> endianness: 
+        Endianness refers to the order that the bytes are stored, in multi-byte numbers.
+        Little endian means that the LSB appears first (writing form right to left)
+        Big endian means that the MSB appears first. (writing from left to right)
+
+        Example, Consider 123
+            normal way to write it is big endian (123)
+            little endian format: 321 
+        Why have 2 systems?
+            -> It's all connected to the underlying architecture of the computer's CPU.
+            Intel microprocessors use little endian. IBM mainframes use big endian.
 '''
 
 
 import os
 
-source_file = 'bm_test.txt'
-# source_file = 'vintage-halloween-bat.bmp'
+# source_file = 'bm_test.txt'
+source_file = 'vintage-halloween-bat.bmp'
 inverted_file = f'inverted-{source_file}'
 
 with open(source_file, 'rb') as bat:  # No encoding
