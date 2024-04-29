@@ -1,5 +1,8 @@
 import time
-from time import time as my_timer
+# from time import time as my_timer
+from time import perf_counter as my_timer  # used for finding the time elapsed
+# from time import monotonic as my_timer
+# from time import process_time as my_timer  # amount of time the CPU spent on a particular task
 import random
 
 input("Press enter to start")
