@@ -1,6 +1,5 @@
 try:
     import tkinter
-
 except ImportError:  # python 2
     import Tkinter as tkinter
 
@@ -16,6 +15,7 @@ def draw_axes(canvas):
     canvas.configure(scrollregion=(-x_origin, -y_origin, y_origin, y_origin))
     canvas.create_line(-x_origin, 0, x_origin, 0, fill="black")
     canvas.create_line(0, y_origin, 0, -y_origin, fill="black")
+    print(locals())
 
 
 def plot(canvas, x, y):
