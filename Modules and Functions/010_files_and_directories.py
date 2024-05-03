@@ -32,3 +32,11 @@ def list_directories(s):
 #     for file in files:
 #         print(file)
 list_directories('.')
+
+
+'''
+    global keyword tells the python to look variable in the global scope which is the module's name space
+    but the `nonlocal` keyword tells the python to look the variable in the enclosing scope.
+    It doesn't look for variable in the global scope.
+    nonlocal variable must exist in the enclosing scope but not be global. Non local variables can't be created
+'''
