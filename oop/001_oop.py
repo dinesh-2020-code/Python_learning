@@ -1,5 +1,7 @@
 class Kettle(object):
 
+    power_source = "electricity"  # class attribute
+
     def __init__(self, make, price) -> None:
         self.make = make
         self.price = price
@@ -37,6 +39,17 @@ kenwood.power = 1.5
 print(kenwood.power)
 
 # print(hamilton.power)  # AttributeError: 'Kettle' object has no attribute 'power'
+
+print("Switch to atomic power")
+Kettle.power_source = "atomic"
+print(Kettle.power_source)
+print("Switch kenwood to gas")
+kenwood.power_source = "gas"
+print(kenwood.power_source)
+print(hamilton.power_source)
+print(Kettle.__dict__)
+print(kenwood.__dict__)
+print(hamilton.__dict__)
 """
 Class: template for creating objects. All objects created using the same class will have the same characteristics
 Object: an instance of a class.
@@ -44,5 +57,6 @@ Instantiate: Create n instance of a class
 Method: a function defined in a class.
 Attribute: a variable bound to an instance of class
 self: it's the reference to the instance of the class
-constructor: a special method that is executed when an instance of a class is created. __init__() here. 
+constructor: a special method that is executed when an instance of a class is created. __init__() here.
+class attribute: shared by all instances 
 """
