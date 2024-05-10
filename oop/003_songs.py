@@ -122,7 +122,7 @@ def load_data():
             elif new_album.name != album_field:
                 # We've just read a new album for the current artist
                 # Retrieve the album object if there is one, otherwise create a new album object and store it in the artist's collection.
-                new_album = find_object(album_field, new_album.albums)
+                new_album = find_object(album_field, new_artist.albums)
                 if new_album is None:
                     new_album = Album(album_field, year_field, new_artist)
                     new_artist.add_album(new_album)
