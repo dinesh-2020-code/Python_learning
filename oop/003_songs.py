@@ -153,7 +153,6 @@ def create_checkfile(artist_list):
                     print("{0.name}\t{1.name}\t{1.year}\t{2.title}".format(new_artist, new_album, new_song), file=checkfile)
 
 
-
 if __name__ == '__main__':
     artists = load_data()
     print("There are {} artists".format(len(artists)))
