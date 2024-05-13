@@ -59,4 +59,7 @@ Attribute: a variable bound to an instance of class
 self: it's the reference to the instance of the class
 constructor: a special method that is executed when an instance of a class is created. __init__() here.
 class attribute: shared by all instances 
+
+Constructors are not overloaded in Python, Python will shadow the all other constructors except one created recently
+To safer side, don't write more than one constructor.
 """
