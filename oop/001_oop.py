@@ -110,11 +110,14 @@ Class/Static Variables and Class Methods:
         def area(self):
             return self.length * self.breadth
 
-        # class method
         @classmethod
         def count_Rect(cls):
             return cls.count  
 
+        @staticmethod
+        def is_square(len, bre):
+            return len == bre
+            
         
     r1 = Rectangle(10, 4)
     r2 = Rectangle(11, 3)
@@ -123,6 +126,12 @@ Class/Static Variables and Class Methods:
     r2.count_Rect()  # 2
     Rectangle.count_Rect() # 2
 
+    r1.is_square(10, 10)  # True
+    Rectangle.is_square(10, 10) # True
 
-    
+
+Static Methods:
+    -> Methods that do not access instance and class variables of a class are known as static methods
+    -> Defined using decorator `@staticmethod'
+    -> Used to establish a relation between class and method
 """
