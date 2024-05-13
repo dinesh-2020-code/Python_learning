@@ -62,4 +62,30 @@ class attribute: shared by all instances
 
 Constructors are not overloaded in Python, Python will shadow the all other constructors except one created recently
 To safer side, don't write more than one constructor.
+
+Instance variables: An object of a class (also known as instance). We can create multiple instances of a class and
+    each instance of a class has its own value of variables (i.e., variables are not shared among instances) and such
+    variables are known as instance variables.
+
+    -> Instance variables can be declared inside __init__ method or any instance method or outside class as well.
+        class Test:
+            
+            def __init__(self):
+                self.a = 10
+
+            def instance_method(self):
+                self.b = 10
+
+        
+        t = Test()
+        dir(t) // {dir contains `a` as instance variable, 'fun'}
+        t.instance_method() 
+        dir(t) // {dir contains `a` and `b` as instance variables, 'fun'}
+        t.c = 20
+        dir(t) # {dir contains `a`, `b` and `c` as instance variables, 'fun'}
+
+Instance methods: The methods of a class accessing instance variables. The first parameter to instance methods will 
+    always be `self`.
+
+    -> 'self' is not a keyword, it's just a variable for storing the reference to the calling object.
 """

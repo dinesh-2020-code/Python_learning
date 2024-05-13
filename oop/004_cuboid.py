@@ -5,8 +5,8 @@ class Cuboid:
         self.breadth = breadth
         self.depth = depth
     
-    def __init__(self):
-        print("0 arg ctor")
+    # def __init__(self):
+    #     print("0 arg ctor")
 
     def lid_area(self):
         return self.length * self.breadth
@@ -16,5 +16,5 @@ class Cuboid:
     
 
 c1 = Cuboid()
-# c2 = Cuboid(10, 4, 2)
-# c3 = Cuboid(10)
+c2 = Cuboid(10, 4, 2)
+c3 = Cuboid(10)
