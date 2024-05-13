@@ -88,4 +88,41 @@ Instance methods: The methods of a class accessing instance variables. The first
     always be `self`.
 
     -> 'self' is not a keyword, it's just a variable for storing the reference to the calling object.
+
+
+Class/Static Variables and Class Methods:
+
+    -> Class variables are shared among all instances of a class. Only one copy of class/static variables exist
+        in the memory. The variables belong to class
+    -> The methods accessing only class variables are known as 'class methods'
+
+    class Rectangle:
+
+        count = 0  # Class variable
+        def __init__(self, length, breadth):
+            self.length = length
+            self.breadth = breadth
+            Rectangle.count += 1
+
+        def perimeter(self):
+            return 2 * (self.length + self.breadth)
+
+        def area(self):
+            return self.length * self.breadth
+
+        # class method
+        @classmethod
+        def count_Rect(cls):
+            return cls.count  
+
+        
+    r1 = Rectangle(10, 4)
+    r2 = Rectangle(11, 3)
+
+    r1.count_Rect()  # 2
+    r2.count_Rect()  # 2
+    Rectangle.count_Rect() # 2
+
+
+    
 """
