@@ -134,4 +134,10 @@ Static Methods:
     -> Methods that do not access instance and class variables of a class are known as static methods
     -> Defined using decorator `@staticmethod'
     -> Used to establish a relation between class and method
+
+Accessors and Mutators: 
+    -> Also Getters and Setters methods
+    -> Accessor methods are used to get the value of an instance variable.
+    -> Mutator methods are used to set/modify the value of an instance variable.
+
 """
