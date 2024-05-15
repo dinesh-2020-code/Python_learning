@@ -104,6 +104,18 @@ Class/Static Variables and Class Methods:
             self.breadth = breadth
             Rectangle.count += 1
 
+        def getLength(self):
+            return self.length
+
+        def getBreadth(self):
+            return self.breadth
+
+        def setLength(self, len):
+            self.length = len
+
+        def setBreadth(self, bre):
+            self.breadth = bre
+
         def perimeter(self):
             return 2 * (self.length + self.breadth)
 
@@ -140,4 +152,13 @@ Accessors and Mutators:
     -> Accessor methods are used to get the value of an instance variable.
     -> Mutator methods are used to set/modify the value of an instance variable.
 
+Inheritance: 
+    -> Inheritance is the process by which one class takes on the attributes and methods of another.
+    -> The class being inherited is called the parent class, and the class that inherits is called the child class.
+    -> The child class inherits all the attributes and methods of its parent class.
+    -> A child class can also have its own attributes and methods that are not present in the parent class.
+    -> The child class is also called derived class, and the class from which it inherits is called the base class.
+    -> A class can be derived from more than one base class in Python, this is called multiple inheritance.
+    -> The order in which the base classes are mentioned is the order in which they will be searched for
+    -> Every class in Python (directly or indirectly) is inherited from an `Object` class.
 """
