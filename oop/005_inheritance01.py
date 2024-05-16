@@ -18,7 +18,7 @@ class Cuboid(Rectangle):
         # We can also initialize the properties of the parent class directly in the child class ctor.
         # self.length = length
         # self.breadth = breadth
-        # self.height = height
+        self.height = height
         print(dir(self))
 
     def volume(self):
