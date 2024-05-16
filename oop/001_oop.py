@@ -161,4 +161,10 @@ Inheritance:
     -> A class can be derived from more than one base class in Python, this is called multiple inheritance.
     -> The order in which the base classes are mentioned is the order in which they will be searched for
     -> Every class in Python (directly or indirectly) is inherited from an `Object` class.
+
+    -> If we are creating the object of child class, then only child class' constructor will be called by default. We need
+    to explicitly call the parent class constructor.
+    -> When we are creating the object of child class, we have 2 options with us, either initalize the parent class' properties
+    inside child class' constructor or call the parent class constructor explicitly.
+    
 """
