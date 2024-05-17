@@ -223,4 +223,12 @@ Polymorphism:
             # both calls works with no issues
             # Python implicitly supports function/method overloading (same method with different behaviour)
 
+            
+    -> Method Overriding: re-defining method of parent class in child class.
+        -> Used to add new functionality to the class with previous functionality preserved.
+
+    -> Operator Overloading:
+        -> Changing the functionality of original operator to work for User defined types (like adding two class like objects)
+        
+
 """
