@@ -174,6 +174,53 @@ Inner/Nested classes
 Polymorphism: 
     -> `Poly` means `many` and `morph` means `forms`.
     -> Polymorphism is the ability of an object to take on many forms.
-    -> One object different actions. Which object is passed, the method of that object will be called at runtime.
+    -> One object different actions. Which object is passed, the method of that object will be called at runtime. 
+    -> Duck Typing 
+    
+    -> Method Overloading: same method but behavior is different
+
+        class Arithmetic:
+            
+            def sum_objects(self, x, y):
+                return x + y
+
+            def sum_objects(self, x, y, z):
+                return x + y + z
+
+
+        if __name__ == '__main__':
+            obj = Arithmetic()
+            obj.sum_objects(1, 3)
+            obj.sum_objects(8.3, 1.3)
+            obj.sum_objects("hello", "world)
+            obj.sum_objects(1, 3)  # TypeError: sum_objects() missing 1 required positional argument: 'z'
+
+            # same method but adding different objects everytime.
+
+            # When you write the method with the same name in class, all previous versions of the method will be shadowed
+            # and latest version will be used when method is called.
+            # If we defined the methods in following form
+                def sum(x, y):
+                    return x + y
+
+                def sum(x, y, z)
+                    return x + y + z
+
+            # If latest version (sum(x, y, z)) will be used when sum function is called
+            # sum(1, 3) # TypeError: sum() missing 1 required positional argument 'z'
+            # If we wish to achieve the same result,
+            # we can define one method and assign the values of third parameter to None as the default value
+
+                def sum(x, y, z=None):
+                    if z is None:
+                        return x + y
+                    return x + y + z
+
+                
+                sum(1, 3)  # 4
+                sum(1, 3, 4) # 8
+                
+            # both calls works with no issues
+            # Python implicitly supports function/method overloading (same method with different behaviour)
 
 """
