@@ -229,6 +229,14 @@ Polymorphism:
 
     -> Operator Overloading:
         -> Changing the functionality of original operator to work for User defined types (like adding two class like objects)
-        
+
+    -> Abstract Class and Interface
+        -> Abstract Class: Class that can not be instantiated
+        -> Abstract Method: A method that is declared, but contains no implementation.
+        -> Purpose: To share the implementation of functionality among child classes, we declare the parent class as abstract class
+        so that its object cannot be created.
+        -> To implement the abstract class, we need to implement all the abstract methods of the parent class.
+        -> Abstract class may have abstract methods and concrete methods.
+        -> Abstract class having only abstract methods is known as `interface` in python.
 
 """
