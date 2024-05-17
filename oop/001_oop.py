@@ -169,5 +169,11 @@ Inheritance:
 
 
 Inner/Nested classes
-    
+    -> Class inside other class
+
+Polymorphism: 
+    -> `Poly` means `many` and `morph` means `forms`.
+    -> Polymorphism is the ability of an object to take on many forms.
+    -> One object different actions. Which object is passed, the method of that object will be called at runtime.
+
 """
