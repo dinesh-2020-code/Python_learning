@@ -166,6 +166,29 @@ Inheritance:
     to explicitly call the parent class constructor.
     -> When we are creating the object of child class, we have 2 options with us, either initalize the parent class' properties
     inside child class' constructor or call the parent class constructor explicitly.
+    -> Multiple Inheritance: When a class inherits more than one class. 
+
+        class A:
+            pass
+
+        class B:
+            pass
+
+        class C(A, B):
+            pass
+
+    -> Multilevel inheritance:
+        class A:
+            pass
+
+        class B(A):
+            pass
+
+        class C(B):
+            pass
+
+    
+    
 
 
 Inner/Nested classes
@@ -238,5 +261,79 @@ Polymorphism:
         -> To implement the abstract class, we need to implement all the abstract methods of the parent class.
         -> Abstract class may have abstract methods and concrete methods.
         -> Abstract class having only abstract methods is known as `interface` in python.
+
+    -> Method Resolution Order (MRO)
+        -> Python provides a built-in method to show the method resolution order of any method (obj.mro())
+            class A():
+                def show():
+                    print('A')
+
+            class B(A):
+                pass
+
+            b_obj = B()
+            b_obj.show()
+            
+            print(B.mro())  # [<class '__main__.B'>, <class '__main__.A'>, <class 'object'>]
+
+        -> In case of multiple inheritance, methods will be resolved from left to right.
+
+            class A:
+                def show(self):
+                    print("A")
+
+            class B:
+                def show(self):
+                    print("B")
+
+            class C(A, B):
+                pass
+
+            c = C()
+            c.show()  # A
+            print(C.mro()) # [<class '__main__.C'>, <class '__main__.A'>, <class '__main__.B'>, <class 'object'>]
+
+        -> In python method resolution will be done by the rule, 'depth-first left-right'.
+
+            class A:
+                pass
+
+            class B(A):
+                pass
+
+            class X: 
+                pass
+
+            class Y(X):
+                pass
+
+            class C(B, Y):
+                pass
+
+            print(C.mro())  # [<class '__main__.C'>, <class '__main__.B'>, <class '__main__.A'>, <class '__main__.Y'>, <class '__main__.X'>, <class 'object'>]
+                    
+        ->  If there is a common class which is inherited by 2 or more classes, then during MRO, the parent class (P here) will be resolved at last.
+
+            class P:
+                pass
+            
+            class A(P):
+                pass
+            
+            class B(A):
+                pass
+            
+            class X(P):
+                pass
+            
+            class Y(X):
+                pass
+            
+            class C(B, Y):
+                pass
+            
+            obj = C()
+            print(C.mro())  # [<class '__main__.C'>, <class '__main__.B'>, <class '__main__.A'>, <class '__main__.Y'>, <class '__main__.X'>, <class '__main__.P'>, <class 'object'>]
+
 
 """
