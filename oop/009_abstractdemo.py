@@ -13,7 +13,7 @@ class Parent(ABC):
 class Child(Parent):
 
     def show(self):
-        return print("Child show")
+        print("Child show")
     
 
 c = Child()
