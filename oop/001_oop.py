@@ -335,5 +335,6 @@ Polymorphism:
             obj = C()
             print(C.mro())  # [<class '__main__.C'>, <class '__main__.B'>, <class '__main__.A'>, <class '__main__.Y'>, <class '__main__.X'>, <class '__main__.P'>, <class 'object'>]
 
+    
 
 """
