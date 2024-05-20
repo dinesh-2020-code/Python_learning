@@ -25,11 +25,11 @@ class Employee:
 
 e1 = Employee("John", "Engineering Manager", 100000)
 print(e1)
-print(e1.total_employees())
+# print(e1.total_employees())
 
 # creating another employee
 e2 = Employee("Julius", "Team Lead", 1222230)
+print("\n")
 print(e2)
-
-print(Employee.total_employees())
-
+print("\n")
+print(f"Total employees: {Employee.total_employees()}")
