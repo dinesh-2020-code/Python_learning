@@ -4,14 +4,14 @@ def div(a, b):
         c = a // b
         return c
     else:
-        return -1
+        raise ZeroDivisionError
     
 
 a = int(input("Enter first number: "))
 b = int(input("Enter second number: "))
 
-c = div(a, b)
-if c == -1:
-    print("Zero Division error")
-else:
+try:
+    c = div(a, b)
     print(f"{a} // {b} is {c}")
+except:
+    print("Zero Division error")
